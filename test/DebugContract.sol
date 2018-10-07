@@ -6,6 +6,9 @@ contract DebugContract {
   uint public otherValue = 5;
 
   function setValue(uint _val) {
+    assembly {
+      sstore(0xDE, 0xB6)
+    }
     value = _val;
     otherValue += _val;
   }
