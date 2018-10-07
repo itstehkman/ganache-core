@@ -348,6 +348,23 @@
       "dev": true,
       "requires": {
         "util": "0.10.3"
+      },
+      "dependencies": {
+        "inherits": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz",
+          "integrity": "sha1-sX0I0ya0Qj5Wjv9xn5GwscvfafE=",
+          "dev": true
+        },
+        "util": {
+          "version": "0.10.3",
+          "resolved": "https://registry.npmjs.org/util/-/util-0.10.3.tgz",
+          "integrity": "sha1-evsa/lCAUkZInj23/g7TeTNqwPk=",
+          "dev": true,
+          "requires": {
+            "inherits": "2.0.1"
+          }
+        }
       }
     },
     "assert-match": {
@@ -2601,6 +2618,19 @@
         "servify": "0.1.12",
         "ws": "3.3.3",
         "xhr-request-promise": "0.1.2"
+      },
+      "dependencies": {
+        "ws": {
+          "version": "3.3.3",
+          "resolved": "https://registry.npmjs.org/ws/-/ws-3.3.3.tgz",
+          "integrity": "sha512-nnWLa/NwZSt4KQJu51MYlCcSQ5g7INpOrOMt4XV8j4dqTXdmlUmSHQ8/oLC069ckre0fRsgfvsKwbTdtKLCDkA==",
+          "dev": true,
+          "requires": {
+            "async-limiter": "1.0.0",
+            "safe-buffer": "5.1.2",
+            "ultron": "1.1.1"
+          }
+        }
       }
     },
     "eth-query": {
@@ -5798,7 +5828,7 @@
         "timers-browserify": "2.0.10",
         "tty-browserify": "0.0.0",
         "url": "0.11.0",
-        "util": "0.10.3",
+        "util": "0.10.4",
         "vm-browserify": "0.0.4"
       },
       "dependencies": {
@@ -5832,6 +5862,15 @@
           "dev": true,
           "requires": {
             "safe-buffer": "5.1.2"
+          }
+        },
+        "util": {
+          "version": "0.10.4",
+          "resolved": "https://registry.npmjs.org/util/-/util-0.10.4.tgz",
+          "integrity": "sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==",
+          "dev": true,
+          "requires": {
+            "inherits": "2.0.3"
           }
         }
       }
@@ -6620,6 +6659,11 @@
       "requires": {
         "is-finite": "1.0.2"
       }
+    },
+    "repl": {
+      "version": "0.1.3",
+      "resolved": "https://registry.npmjs.org/repl/-/repl-0.1.3.tgz",
+      "integrity": "sha1-LwXUKwyItD0FzL2hDtFK7/Vpm2A="
     },
     "request": {
       "version": "2.88.0",
@@ -8102,20 +8146,11 @@
       "optional": true
     },
     "util": {
-      "version": "0.10.3",
-      "resolved": "https://registry.npmjs.org/util/-/util-0.10.3.tgz",
-      "integrity": "sha1-evsa/lCAUkZInj23/g7TeTNqwPk=",
-      "dev": true,
+      "version": "0.11.0",
+      "resolved": "https://registry.npmjs.org/util/-/util-0.11.0.tgz",
+      "integrity": "sha512-5n12uMzKCjvB2HPFHnbQSjaqAa98L5iIXmHrZCLavuZVe0qe/SJGbDGWlpaHk5lnBkWRDO+dRu1/PgmUYKPPTw==",
       "requires": {
-        "inherits": "2.0.1"
-      },
-      "dependencies": {
-        "inherits": {
-          "version": "2.0.1",
-          "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz",
-          "integrity": "sha1-sX0I0ya0Qj5Wjv9xn5GwscvfafE=",
-          "dev": true
-        }
+        "inherits": "2.0.3"
       }
     },
     "util-deprecate": {
@@ -8931,14 +8966,11 @@
       "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="
     },
     "ws": {
-      "version": "3.3.3",
-      "resolved": "https://registry.npmjs.org/ws/-/ws-3.3.3.tgz",
-      "integrity": "sha512-nnWLa/NwZSt4KQJu51MYlCcSQ5g7INpOrOMt4XV8j4dqTXdmlUmSHQ8/oLC069ckre0fRsgfvsKwbTdtKLCDkA==",
-      "dev": true,
+      "version": "6.1.0",
+      "resolved": "https://registry.npmjs.org/ws/-/ws-6.1.0.tgz",
+      "integrity": "sha512-H3dGVdGvW2H8bnYpIDc3u3LH8Wue3Qh+Zto6aXXFzvESkTVT6rAfKR6tR/+coaUvxs8yHtmNV0uioBF62ZGSTg==",
       "requires": {
-        "async-limiter": "1.0.0",
-        "safe-buffer": "5.1.2",
-        "ultron": "1.1.1"
+        "async-limiter": "1.0.0"
       }
     },
     "xhr": {
