@@ -2,11 +2,8 @@ var Ganache = require('.');
 var Web3 = require('web3');
 var solc = require('solc');
 var fs = require('fs');
-var VM = require('ethereumjs-vm')
 
 let gasLimit = '0xfffffffffff'
-
-var vm = new VM()
 
 // web 3 setup
 var web3 = new Web3()

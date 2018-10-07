@@ -52,33 +52,22 @@ gasEstimate.then(function(estimate) {
     gas: '0xffffffffff',
     gasPrice: '0x3000000'
   })
+    .on('error', function(error){
+      console.log('error: ' + error)
+    })
+    .on('transactionHash', function(transactionHash){
+      console.log('txHash: ' + transactionHash)
+    })
+    .on('receipt', function(receipt){
+      console.log('contractAddress')
+      console.log(receipt.contractAddress) // contains the new contract address
+    })
+    .on('confirmation', function(confirmationNumber, receipt){
+      console.log('confirmation')
+      console.log(newContractInstance.options.address) // instance with the new contract address
+    })
+    .then(function(newContractInstance){
+      console.log('new contract')
+      console.log(newContractInstance.options.address) // instance with the new contract address
+    });
 })
-
-//gasEstimate.then(function(estimate) {
-//  Contract.deploy({
-//    data: '0x'+ bytecode,
-//    //gas: Buffer.from(Number(estimate).toString('16'), 'hex')
-//  }).send({
-//    from: account,
-//    gas: 1500000,
-//    gasPrice: '30000'
-//  }, function(error, transactionHash){
-//    console.log('error txHash')
-//    console.log(error)
-//    console.log(transactionHash)
-//  })
-//    .on('error', function(error){ console.log('error: ' + error) })
-//    .on('transactionHash', function(transactionHash){
-//      console.log('txHash: ' + transactionHash)
-//    })
-//    .on('receipt', function(receipt){
-//      console.log('contractAddress')
-//      console.log(receipt.contractAddress) // contains the new contract address
-//    })
-//    .on('confirmation', function(confirmationNumber, receipt){
-//      console.log(newContractInstance.options.address) // instance with the new contract address
-//    })
-//    .then(function(newContractInstance){
-//      console.log(newContractInstance.options.address) // instance with the new contract address
-//    });
-//})
