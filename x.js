@@ -2,15 +2,11 @@ var Ganache = require('.');
 var Web3 = require('web3');
 var solc = require('solc')
 var fs = require('fs')
-var VM = require('ethereumjs-vm')
 
 var web3 = new Web3()
-var vm = new VM()
-//let gasLimit = parseInt('0xfffffffffff')
 let gasLimit = '0xfffffffffff'
 
 var provider = Ganache.provider({
-  vm: vm,
   gasLimit: gasLimit
 });
 web3.setProvider(provider);
@@ -35,12 +31,12 @@ abi = JSON.parse(abi)
 var bytecode = compiledContract.contracts[contractName].bytecode;
 debugger;
 
-// Patch bytecode with debug opcodes if needed
-// var debugOpcode = '46'
-// var occurences = bytecode.split('60b660de55').length - 1
-// bytecode = bytecode.replace(/60b660de55/gi, '60b660de55' + debugOpcode)
-// var occurences = bytecode.split('60b660de55').length - 1
-// console.log(occurences + " debug statements added")
+//Patch bytecode with debug opcodes if needed
+var debugOpcode = '46'
+var occurences = bytecode.split('60b660de55').length - 1
+bytecode = bytecode.replace(/60b660de55/gi, '60b660de55' + debugOpcode)
+var occurences = bytecode.split('60b660de55').length - 1
+console.log(occurences + " debug statements added")
 
 // Deploy Contract
 let Contract = new web3.eth.Contract(abi);
